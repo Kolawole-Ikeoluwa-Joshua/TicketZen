@@ -32,3 +32,20 @@ Start skaffold by running this in the root directory
 ```
 skaffold dev
 ```
+
+Setup dummy domain used in ingress-nginx manifest for development purpose, in your local host file.
+Edit the following host files with admin privileges:
+
+```
+Mac/Linux => /etc/hosts
+
+Windows => C:\Windows\System32\Drivers\etc\hosts
+```
+
+After editing try accessing the test path in your browser.
+
+Note: Type the following command while on your browser screen to bypass chrome connection error:
+
+```
+thisisunsafe
+```
