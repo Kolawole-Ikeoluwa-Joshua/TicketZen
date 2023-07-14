@@ -19,3 +19,9 @@ Setup `tsconfig.json` manifest
 ```
 tsc --init
 ```
+
+Dockerize the auth service using its `Dockerfile`.
+
+```
+docker build -t <docker_id>/auth .
+```
