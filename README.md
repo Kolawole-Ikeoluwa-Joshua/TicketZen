@@ -25,3 +25,10 @@ Dockerize the auth service using its `Dockerfile`.
 ```
 docker build -t <docker_id>/auth .
 ```
+
+Setup Skaffold manifest to automate development workflow in K8s.
+Start skaffold by running this in the root directory
+
+```
+skaffold dev
+```
