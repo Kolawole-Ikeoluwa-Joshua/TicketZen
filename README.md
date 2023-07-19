@@ -12,6 +12,8 @@ Install the following modules
 
 ```
 npm install typescript ts-node-dev express @types/express
+
+npm install express-validator
 ```
 
 Setup `tsconfig.json` manifest
