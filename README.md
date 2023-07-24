@@ -14,6 +14,9 @@ Install the following modules
 npm install typescript ts-node-dev express @types/express
 
 npm install express-validator
+
+// handling errors in asynchronous requests
+npm install express-async-errors
 ```
 
 Setup `tsconfig.json` manifest
