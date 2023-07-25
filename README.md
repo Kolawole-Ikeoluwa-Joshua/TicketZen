@@ -17,6 +17,10 @@ npm install express-validator
 
 // handling errors in asynchronous requests
 npm install express-async-errors
+
+
+// setup mongodb object modeling tool
+npm install mongoose
 ```
 
 Setup `tsconfig.json` manifest
@@ -53,4 +57,14 @@ Note: Type the following command while on your browser screen to bypass chrome c
 
 ```
 thisisunsafe
+```
+
+### Database Setup
+
+Setup `auth-mongo-depl` manifest
+
+```
+docker pull mongo
+
+skaffold dev
 ```
