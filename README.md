@@ -21,6 +21,8 @@ npm install express-async-errors
 
 // setup mongodb object modeling tool
 npm install mongoose
+npm install @types/mongoose
+
 ```
 
 Setup `tsconfig.json` manifest
