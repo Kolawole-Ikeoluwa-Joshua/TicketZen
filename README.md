@@ -27,6 +27,9 @@ npm install @types/mongoose
 // add cookie sessions support
 // install cookie-session library type definition file as well
 npm install cookie-session @types/cookie-session
+
+// add json web token
+npm install jsonwebtoken @types/jsonwebtoken
 ```
 
 Setup `tsconfig.json` manifest
