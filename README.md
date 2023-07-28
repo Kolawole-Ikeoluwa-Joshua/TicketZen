@@ -23,6 +23,10 @@ npm install express-async-errors
 npm install mongoose
 npm install @types/mongoose
 
+
+// add cookie sessions support
+// install cookie-session library type definition file as well
+npm install cookie-session @types/cookie-session
 ```
 
 Setup `tsconfig.json` manifest
