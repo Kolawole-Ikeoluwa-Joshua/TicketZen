@@ -68,7 +68,7 @@ Note: Type the following command while on your browser screen to bypass chrome c
 thisisunsafe
 ```
 
-### Database Setup
+#### Database Setup
 
 Setup `auth-mongo-depl` manifest
 
@@ -76,4 +76,14 @@ Setup `auth-mongo-depl` manifest
 docker pull mongo
 
 skaffold dev
+```
+
+#### Secure JWT Signing Keys in k8s
+
+Creating a Secret using an imperative command:
+
+```
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
+
+kubectl get secrets
 ```
