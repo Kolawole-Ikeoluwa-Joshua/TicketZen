@@ -23,7 +23,7 @@ app.use(
     })
 );
 
-// test endpoints
+// connect routes to express app
 app.use(currentUserRouter);
 app.use(signinRouter);
 app.use(signoutRouter);
