@@ -1,6 +1,6 @@
 # TicketZen
 
-### Auth Service Setup
+## Auth Service Setup
 
 Setup `package.json`` manifest
 
@@ -68,7 +68,7 @@ Note: Type the following command while on your browser screen to bypass chrome c
 thisisunsafe
 ```
 
-#### Database Setup
+### Database Setup
 
 Setup `auth-mongo-depl` manifest
 
@@ -78,7 +78,7 @@ docker pull mongo
 skaffold dev
 ```
 
-#### Secure JWT Signing Keys in k8s
+### Secure JWT Signing Keys in k8s
 
 Creating a Secret using an imperative command:
 
@@ -87,3 +87,13 @@ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
 
 kubectl get secrets
 ```
+
+### Testing Isolated Microservices
+
+Install the following test libraries for Auth service:
+
+```
+npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongodb-memory-server
+```
+
+Ensure your docker images are not built with these test dev-dependencies by editing `RUN npm install --omit=dev` in Auth service Dockerfile.
