@@ -5,6 +5,9 @@ import { app } from '../app';
 let mongo: any;
 // hook runs before all tests
 beforeAll(async () => {
+    
+    process.env.JWT_KEY = 'asdkfk'; // to by pass failed signup test
+
     mongo = await MongoMemoryServer.create();
     const mongoUri = mongo.getUri();
 

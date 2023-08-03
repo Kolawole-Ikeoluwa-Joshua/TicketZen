@@ -97,3 +97,9 @@ npm install --save-dev @types/jest @types/supertest jest ts-jest supertest mongo
 ```
 
 Ensure your docker images are not built with these test dev-dependencies by editing `RUN npm install --omit=dev` in Auth service Dockerfile.
+
+Run tests in service directory using this command:
+
+```
+npm run test
+```
