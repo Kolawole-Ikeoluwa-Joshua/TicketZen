@@ -103,3 +103,21 @@ Run tests in service directory using this command:
 ```
 npm run test
 ```
+
+## Integrating a Server-Side-Rendered React App
+
+Set up a React App using the following process:
+```
+//create directory
+mkdir client
+
+// generate package.json
+npm init -y
+
+// install dependencies
+npm install react react-dom next
+
+// start up Next Project
+Note: add start up script in pacakage.json
+npm run dev
+```
