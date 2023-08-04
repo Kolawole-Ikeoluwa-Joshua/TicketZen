@@ -107,6 +107,7 @@ npm run test
 ## Integrating a Server-Side-Rendered React App
 
 Set up a React App using the following process:
+
 ```
 //create directory
 mkdir client
@@ -120,4 +121,10 @@ npm install react react-dom next
 // start up Next Project
 Note: add start up script in pacakage.json
 npm run dev
+```
+
+Dockerize Next App:
+
+```
+docker build -t <docker_id>/client .
 ```
