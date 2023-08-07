@@ -125,6 +125,9 @@ npm run dev
 
 //install bootstrap
 npm install bootstrap
+
+// install axios
+npm install axios
 ```
 
 Dockerize Next App:
