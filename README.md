@@ -122,6 +122,9 @@ npm install react react-dom next
 // start up Next Project
 Note: add start up script in pacakage.json
 npm run dev
+
+//install bootstrap
+npm install bootstrap
 ```
 
 Dockerize Next App:
