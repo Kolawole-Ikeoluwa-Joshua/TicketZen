@@ -1,4 +1,5 @@
 import { useState } from 'react'; // hooks to track state
+import Router from 'next/router';
 import useRequest from '../../hooks/use-request'; //custom hook helper function
 
 
@@ -11,7 +12,8 @@ export default () => {
         method: 'post',
         body: {
             email, password
-        }
+        },
+        onSuccess: () => Router.push('/')
     });
 
 
