@@ -1,14 +1,19 @@
-const Landing = ({ color }) => {
-    console.log('I am in the component', color);
-    return <h1>Landing Page</h1>;
+import axios from 'axios';
 
+const Landing = ({ currentUser }) => {
+    console.log(currentUser);
+    axios.get('/api/users/currentuser').catch((err) => {
+        console.log(err.message);
+    });
+
+    return <h1>Landing Page</h1>;
 };
 
 // get extra data before rendering up webpage - used when SSR
-Landing.getInitialProps = () => {
-    console.log('I am on the server!');
+// Landing.getInitialProps = async () => {
+//    const response = await axios.get('/api/users/currentuser');
 
-    return { color: 'red' };
-};
+//    return response.data;
+// };
 
 export default Landing;
