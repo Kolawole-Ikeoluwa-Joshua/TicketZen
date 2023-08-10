@@ -136,3 +136,12 @@ Dockerize Next App:
 docker build -t <docker_id>/client .
 docker push <docker_id>/client
 ```
+
+K8s Research - Cross Namespace Service Communication:
+
+```
+kubectl get namespace
+kubectl get services
+
+kubectl get services -n ingress-nginx
+```
