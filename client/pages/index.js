@@ -11,16 +11,15 @@ const Landing = ({ currentUser }) => {
 };
 
 // get extra data before rendering up webpage - used when SSR
-Landing.getInitialProps = async () => {
+Landing.getInitialProps = async ({ req }) => {
    if (typeof window === 'undefined') {
         // we are on the server!
         // requests should be made to cross namespace ingress-nginx-ctrlr domain
         // http://SERVICENAME.NAMESPACE.svc.cluster.local
         const { data } = await axios.get(
-            'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/users/currentuser', {
-                headers: {
-                    Host: 'ticketzen.dev'
-                }
+            'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/users/currentuser', 
+            {
+                headers: req.headers
             }
         );
 
