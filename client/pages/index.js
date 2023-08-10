@@ -1,4 +1,4 @@
-import axios from 'axios';
+import buildClient from "../api/build-client";
 
 const Landing = ({ currentUser }) => {
     
@@ -11,28 +11,12 @@ const Landing = ({ currentUser }) => {
 };
 
 // get extra data before rendering up webpage - used when SSR
-Landing.getInitialProps = async ({ req }) => {
-   if (typeof window === 'undefined') {
-        // we are on the server!
-        // requests should be made to cross namespace ingress-nginx-ctrlr domain
-        // http://SERVICENAME.NAMESPACE.svc.cluster.local
-        const { data } = await axios.get(
-            'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/users/currentuser', 
-            {
-                headers: req.headers
-            }
-        );
+Landing.getInitialProps = async (context) => {
+    const client = buildClient(context);
 
-        return data;
-   } else {
-        // we are on the browser!
-        // requests can be made with a base url of ''
-        const { data } = await axios.get('/api/users/currentuser');
+    const { data } = await client.get('/api/users/currentuser');
 
-        return data;
-   }
-
-   return {};
+    return data;
 };
 
 export default Landing;
