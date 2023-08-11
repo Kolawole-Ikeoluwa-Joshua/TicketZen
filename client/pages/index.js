@@ -10,8 +10,8 @@ const Landing = ({ currentUser }) => {
 
 // get extra data before rendering up webpage - used when SSR
 Landing.getInitialProps = async (context) => {
+    console.log('LANDING PAGE!');
     const client = buildClient(context);
-
     const { data } = await client.get('/api/users/currentuser');
 
     return data;
