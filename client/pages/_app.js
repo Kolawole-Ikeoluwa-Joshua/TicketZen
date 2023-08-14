@@ -3,16 +3,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 import buildClient from '../api/build-client';
 
 // define custom app component wrapper for nextjs
-const AppComponent = ({ Component, pageProps }) => {
-    return <div>
+const AppComponent = ({ Component, pageProps, currentUser }) => {
+    return (
+    <div>
         <h1>
-            Header!
+            Header {currentUser ? currentUser.email: ""}       
         </h1>
-    
         <Component {...pageProps} />
     </div>
+    );
 };
 
+// information fetching for entire app
 AppComponent.getInitialProps = async appContext => {
     const client = buildClient(appContext.ctx);
     const { data } = await client.get('/api/users/currentuser');
@@ -23,7 +25,10 @@ AppComponent.getInitialProps = async appContext => {
 
     }
     
-    return data;
+    return {
+        pageProps,
+        ...data
+    }
      
 };
 

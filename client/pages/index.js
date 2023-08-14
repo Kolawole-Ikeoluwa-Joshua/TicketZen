@@ -9,6 +9,7 @@ const Landing = ({ currentUser }) => {
 };
 
 // get extra data before rendering up webpage - used when SSR
+// information fetching for individual pages
 Landing.getInitialProps = async (context) => {
     console.log('LANDING PAGE!');
     const client = buildClient(context);
