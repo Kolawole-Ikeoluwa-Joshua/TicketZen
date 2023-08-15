@@ -145,3 +145,49 @@ kubectl get services
 
 kubectl get services -n ingress-nginx
 ```
+
+## Code Sharing and Resuse between Services
+
+1. Create public NPM organization
+
+2. Publish NPM Modules
+
+```
+// setup common directory and rename package.json
+mkdir common
+npm init -y
+
+// create a new git repo for common and commit changes
+cd common
+git init, git add, git commit
+
+// login to NPM
+npm login
+
+// publish to NPM organization
+npm publish --access public
+
+```
+
+3. Set up tooling for common project
+
+```
+// generate typescript config file
+tsc --init
+
+// install dev dependencies
+npm install typescript del-cli --save-dev
+
+// update tsconfig & package.json for typescript to javascript transpiling
+
+package.json:
+"scripts": {
+    "clean": "del-cli ./build/*",
+    "build": "tsc"
+},
+
+tsconfig:
+"declaration": true,
+"outDir": "./build",
+
+```
