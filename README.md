@@ -169,7 +169,7 @@ npm publish --access public
 
 ```
 
-3. Set up tooling for common project
+3. Set up tooling for common module
 
 ```
 // generate typescript config file
@@ -196,17 +196,17 @@ tsconfig:
     "build/**/*"
 ],
 
-// version changes to common package
+// version changes to common module
 npm version patch
 
-// build package and publish
+// build module and publish
 npm run build
 npm publish
 ```
 
 4. Set up easy publish script - just for this project usecase
 
-Note ideal in a real-world project, just to speed up package publishing process in this project
+NNOTE: Not ideal in a real-world project, just to speed up package publishing process in this project
 
 ```
 /* custom publish script
@@ -217,6 +217,21 @@ Note ideal in a real-world project, just to speed up package publishing process 
   }
 */
 
-// publish package
+// publish module
+npm run pub
+```
+
+5. Relocate shared code
+   moving shared codes from auth service:
+
+```
+// move middlewares and errors into common's src directory
+
+// export modules into common's index.ts
+
+// install dependencies in common directory
+npm install express express-validator cookie-session jsonwebtoken @types/cookie-session @types/express @types/jsonwebtoken
+
+// publish common module
 npm run pub
 ```
