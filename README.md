@@ -190,4 +190,33 @@ tsconfig:
 "declaration": true,
 "outDir": "./build",
 
+// addtional configs:
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+],
+
+// version changes to common package
+npm version patch
+
+// build package and publish
+npm run build
+npm publish
+```
+
+4. Set up easy publish script - just for this project usecase
+
+Note ideal in a real-world project, just to speed up package publishing process in this project
+
+```
+/* custom publish script
+ "scripts": {
+    "clean": "del-cli ./build/*",
+    "build": "npm run clean && tsc",
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+  }
+*/
+
+// publish package
+npm run pub
 ```
