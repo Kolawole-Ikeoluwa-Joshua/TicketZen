@@ -206,7 +206,7 @@ npm publish
 
 4. Set up easy publish script - just for this project usecase
 
-NNOTE: Not ideal in a real-world project, just to speed up package publishing process in this project
+NOTE: Not ideal in a real-world project, just to speed up package publishing process in this project
 
 ```
 /* custom publish script
@@ -222,7 +222,8 @@ npm run pub
 ```
 
 5. Relocate shared code
-   moving shared codes from auth service:
+
+moving shared codes from auth service:
 
 ```
 // move middlewares and errors into common's src directory
@@ -234,4 +235,24 @@ npm install express express-validator cookie-session jsonwebtoken @types/cookie-
 
 // publish common module
 npm run pub
+```
+
+6. Updating auth service
+
+```
+// navigate to the auth directory and install common module
+npm install @scar-tickets/common
+
+// update import statements in auth's src
+```
+
+7. Updating common module
+
+```
+// make changes
+// build module
+npm run pub
+
+// update auth dependency
+npm update @scar-tickets/common
 ```
