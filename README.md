@@ -69,6 +69,16 @@ Note: Type the following command while on your browser screen to bypass chrome c
 thisisunsafe
 ```
 
+### Setup Ingress-Nginx Controller
+
+Inspect config file:
+https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.1/deploy/static/provider/cloud/deploy.yaml
+
+```
+// deploy in cluster
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.1/deploy/static/provider/cloud/deploy.yaml
+```
+
 ### Database Setup
 
 Setup `auth-mongo-depl` manifest
