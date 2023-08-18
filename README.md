@@ -255,4 +255,8 @@ npm run pub
 
 // update auth dependency
 npm update @scar-tickets/common
+
+// you can verify the auth container is running latest common module
+// by locating the pacakage.json in the container
+kubectl exec -it <auth-container-id> sh
 ```
