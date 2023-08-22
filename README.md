@@ -277,3 +277,14 @@ Documentations:
 
 - [NATS](https://docs.nats.io/running-a-nats-service/introduction)
 - [NATS on DockerHub](https://hub.docker.com/_/nats-streaming)
+- [node-nats-streaming](https://www.npmjs.com/package/node-nats-streaming)
+
+### Building a NATS Test Project:
+
+Set up directory and install dependencies:
+
+```
+npm install node-nats-streaming ts-node-dev typescript @types/node
+
+tsc --init
+```
