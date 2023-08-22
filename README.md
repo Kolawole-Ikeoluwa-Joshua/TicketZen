@@ -275,5 +275,5 @@ kubectl exec -it <auth-container-id> sh
 
 Documentations:
 
-- ![NATS](https://docs.nats.io/running-a-nats-service/introduction)
-- ![NATS on DockerHub](https://hub.docker.com/_/nats-streaming)
+- [NATS](https://docs.nats.io/running-a-nats-service/introduction)
+- [NATS on DockerHub](https://hub.docker.com/_/nats-streaming)
