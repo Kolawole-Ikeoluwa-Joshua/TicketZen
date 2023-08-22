@@ -288,3 +288,16 @@ npm install node-nats-streaming ts-node-dev typescript @types/node
 
 tsc --init
 ```
+
+Port-Forwarding to allow traffic to NATS
+
+```
+// retrieve NATS pod id
+kubectl get pods
+
+// port-forwarding with kubectl
+kubectl port-forward <nats-id>  4222:4222
+
+// in another terminal window, test NATS connection
+npm run publish
+```
