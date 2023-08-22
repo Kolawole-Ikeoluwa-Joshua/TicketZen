@@ -270,3 +270,10 @@ npm update @scar-tickets/common
 // by locating the pacakage.json in the container
 kubectl exec -it <auth-container-id> sh
 ```
+
+## Event Bus Implementation (NATS Streaming Server)
+
+Documentations:
+
+- ![NATS](https://docs.nats.io/running-a-nats-service/introduction)
+- ![NATS on DockerHub](https://hub.docker.com/_/nats-streaming)
