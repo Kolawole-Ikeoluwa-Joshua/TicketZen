@@ -271,6 +271,18 @@ npm update @scar-tickets/common
 kubectl exec -it <auth-container-id> sh
 ```
 
+## Create-Read-Update-Destroy Server Setup (Ticket service)
+
+Setup project directory, find checklist of process below:
+
+- Create package.json & install dependencies
+- Write Dockefile
+- Create index.ts to run project
+- Build docker image and push to dockerhub, only if k8s is running on locally skaffold will require prebuilt images (optional if k8s on GCP)
+
+Note: Most of these checklists were done when creating the Auth service, so you can refactor
+the boilerplate codes from that directory
+
 ## Event Bus Implementation (NATS Streaming Server)
 
 Documentations:
