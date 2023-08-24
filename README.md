@@ -282,6 +282,7 @@ Setup project directory, find checklist of processes below:
 - Write k8s file for deployment, service
 - Update skaffold.yaml to do file sync for tickets
 - Write k8s file for MongoDB deployment service
+- Implement TDD
 
 Note: Most of these checklists were done when creating the Auth service, so you can refactor
 the boilerplate codes from that directory
