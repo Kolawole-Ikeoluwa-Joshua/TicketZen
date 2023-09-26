@@ -10,19 +10,40 @@ import { Ticket } from '../models/ticket';
 
 const router = express.Router();
 
-router.put('/api/tickets/:id', requireAuth, async (req: Request, res: Response) => {
-    const ticket = await Ticket.findById(req.params.id);
+router.put(
+    '/api/tickets/:id', 
+    requireAuth,
+    [
+        body('title')
+            .not()
+            .isEmpty()
+            .withMessage('Title is required'),
+        body('price')
+            .isFloat({ gt: 0 })
+            .withMessage('Price must be provided and must be greater than 0')
+    ], 
+    validateRequest,
+    async (req: Request, res: Response) => {
+        const ticket = await Ticket.findById(req.params.id);
 
-    if(!ticket) {
-        throw new NotFoundError();
+        if(!ticket) {
+            throw new NotFoundError();
+        }
+
+        // currentUser already defined in requireAuth middleware
+        if (ticket.userId !== req.currentUser!.id) {
+            throw new NotAuthorizedError();
+        }
+
+        // apply updates
+        ticket.set({
+            title: req.body.title,
+            price: req.body.price
+        });
+        await ticket.save();
+
+        res.send(ticket);
     }
-
-    // currentUser already defined in requireAuth middleware
-    if (ticket.userId !== req.currentUser!.id) {
-        throw new NotAuthorizedError();
-    }
-
-    res.send(ticket);
-});
+);
 
 export { router as updateTicketRouter };
