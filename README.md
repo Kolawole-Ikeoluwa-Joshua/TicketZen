@@ -316,4 +316,10 @@ kubectl port-forward <nats-id>  4222:4222
 
 // in another terminal window, test NATS connection
 npm run publish
+
+// debugging missing messages
+kubectl port-forward <nats-id>  8222:8222
+
+on broswer: http://localhost:8222/streaming/
+
 ```
