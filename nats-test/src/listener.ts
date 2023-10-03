@@ -1,4 +1,4 @@
-import nats, { Message } from 'node-nats-streaming';
+import nats, { Message, Stan } from 'node-nats-streaming';
 import { randomBytes } from 'crypto';
 
 console.clear()
@@ -9,6 +9,12 @@ const stan = nats.connect('ticketzen', randomBytes(4).toString('hex'), {
 
 stan.on('connect', () => {
     console.log('Listener connected to NATS');
+
+    // event handler for client shutdown
+    stan.on('close', () => {
+        console.log('NATS connection closed!');
+        process.exit();
+    });
 
     // customizing subscriptions
     const options = stan
@@ -38,3 +44,6 @@ stan.on('connect', () => {
     });
 });
 
+// listen for interrupt or shutdown signals
+process.on('SIGINT', () => stan.close());
+process.on('SIGTERM', () => stan.close());
