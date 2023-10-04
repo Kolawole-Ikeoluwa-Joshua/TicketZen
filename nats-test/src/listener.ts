@@ -19,7 +19,9 @@ stan.on('connect', () => {
     // customizing subscriptions
     const options = stan
         .subscriptionOptions()
-        .setManualAckMode(true);
+        .setManualAckMode(true)
+        .setDeliverAllAvailable() // event redelivery
+        .setDurableName('example-service'); //durable subscription
 
     // subscription listens to channel
     // queue group = orders-service-queue-group
