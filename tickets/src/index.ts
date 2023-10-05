@@ -3,6 +3,7 @@ import { app } from './app';
 
 // database connection
 const start = async () => {
+    console.log('Starting...')
     // check for JWT token
     if (!process.env.JWT_KEY) {
         throw new Error('JWT_KEY must be defined');
