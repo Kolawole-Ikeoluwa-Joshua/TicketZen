@@ -1,6 +1,5 @@
 import nats from 'node-nats-streaming';
 import { TicketCreatedPublisher } from './events/ticket-created-publisher';
-import { error } from 'console';
 
 console.clear()
 //clientid = abc
