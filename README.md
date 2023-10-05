@@ -335,6 +335,10 @@ npm install node-nats-streaming
 
 Publish common module to npm registry.
 
+```
+npm run pub
+```
+
 In tickets service, update common module used
 
 ```
@@ -346,3 +350,9 @@ Restart NATS pod to dump all test events emitted during development.
 ```
 kubectl delete pod <pod-id>
 ```
+
+## Tickets Service (NATS Implementation):
+
+##### Managing a NATS Client
+
+In `tickets/src/events/publisher`, create a simple publisher to emit tickets events to NATS.
