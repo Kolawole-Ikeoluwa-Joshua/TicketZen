@@ -323,3 +323,26 @@ kubectl port-forward <nats-id>  8222:8222
 on broswer: http://localhost:8222/streaming/
 
 ```
+
+##### Update Common Module with Event Definitions
+
+Setup an events directory with Event Definitions to be used across Services built with Typescript in common(src).
+Note: Install dependencies
+
+```
+npm install node-nats-streaming
+```
+
+Publish common module to npm registry.
+
+In tickets service, update common module used
+
+```
+npm update @scar-tickets/common
+```
+
+Restart NATS pod to dump all test events emitted during development.
+
+```
+kubectl delete pod <pod-id>
+```
