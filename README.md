@@ -326,7 +326,7 @@ on broswer: http://localhost:8222/streaming/
 
 ##### Update Common Module with Event Definitions
 
-Setup an events directory with Event Definitions to be used across Services built with Typescript in common(src).
+Setup an `events` directory with Event Definitions to be used across Services built with Typescript in common(src).
 Note: Install dependencies
 
 ```
