@@ -356,3 +356,13 @@ kubectl delete pod <pod-id>
 ##### Managing a NATS Client
 
 In `tickets/src/events/publisher`, create a simple publisher to emit tickets events to NATS.
+
+## CI/CD
+
+#### prerequisite
+
+- Create new dev branch
+- Setup K8s Cluster on Digital Ocean
+- Setup GitHub Actions Pipelines:
+  - CI: for each service: enable parallel and selective tests execution
+  - CD:
