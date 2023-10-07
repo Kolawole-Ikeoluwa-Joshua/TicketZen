@@ -1,6 +1,3 @@
-# Ignore shared library codes
-common/
-
 # Ignore node_modules directory
 node_modules/
 
