@@ -43,11 +43,20 @@ docker build -t <docker_id>/auth .
 docker push <docker_id>/auth
 ```
 
+### Start up & Shut down using Skaffold
+
 Setup Skaffold manifest to automate development workflow in K8s.
 Start skaffold by running this in the root directory
 
 ```
+# startup
 skaffold dev
+
+# shutdown
+CTRL + C
+
+# terminate deployments
+skaffold delete
 ```
 
 Setup dummy domain used in ingress-nginx manifest for development purpose, in your local host file.
