@@ -14,3 +14,6 @@ npm install node-nats-streaming
 
 NATS Singleton Implementation: Create a class that initializes a client from nats library, export instance of the class to initialze a client in `index.ts`,
 and access client in `new.ts` route handler.
+
+Test ticket created and updated publishing
+
