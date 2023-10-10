@@ -25,6 +25,9 @@ beforeAll(async () => {
 });
 // hook runs before each tests
 beforeEach(async () => {
+    // reset natsWrapper
+    jest.clearAllMocks();
+
     const collections = await mongoose.connection.db.collections();
 
     for (let collection of collections) {
