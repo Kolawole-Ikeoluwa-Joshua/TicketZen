@@ -9,6 +9,9 @@ declare global {
     var signin: () => string[];
 }
 
+// mock natsWrapper
+jest.mock('../nats-wrapper');
+
 let mongo: any;
 // hook runs before all tests
 beforeAll(async () => {
