@@ -15,5 +15,15 @@ npm install node-nats-streaming
 NATS Singleton Implementation: Create a class that initializes a client from nats library, export instance of the class to initialze a client in `index.ts`,
 and access client in `new.ts` route handler.
 
-Test ticket created and updated publishing
+Test ticket created and updated publishing.
+
+SPECIAL CASE: NOT IMPLEMENTED IN PROJECT
+
+How to handle publish failures:
+
+- Save transactions into DB
+- Save events into DB
+- Seperate process watching events records, polls & sends events to NATS
+- Use DB Transaction to implement saving both (transactions & events successfully)
+
 
