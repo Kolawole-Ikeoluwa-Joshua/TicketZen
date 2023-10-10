@@ -28,3 +28,11 @@ How to handle publish failures, in case NATS connection is lost:
 ### Fixing Unit Tests:
 
 We need Jest to implement a Mock NatsWrapper which will Fake an inititalized NATS CLient. This can then be used in our test suites.
+
+### NATS Env Variables
+
+Add the following NATS Environment Variables to tickets service deployment:
+
+- Cluster ID
+- Client ID
+- Nats Url
