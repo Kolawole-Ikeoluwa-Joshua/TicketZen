@@ -31,4 +31,13 @@ build:
       sync:
         manual:
           - src: 'src/**/*.ts'
-            dest: .    
+            dest: .
+    - image: kolawolejoshua/orders
+      context: orders
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+    
