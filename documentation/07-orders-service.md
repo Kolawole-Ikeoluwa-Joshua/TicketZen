@@ -10,3 +10,12 @@ This service works with the tickets service, so we implement cross-service data 
 - Create K8s deployement manifest
 - Set up file sync options in the skaffold.yaml file
 - Set up routing rules in the Ingress Service
+
+### Routes
+
+Setup the following routes:
+
+- index ==> GET (/api/orders)
+- show ==> GET (/api/orders/:id)
+- new ==> POST (/api/orders)
+- delete ==> DELETE (/api/orders/:id)
