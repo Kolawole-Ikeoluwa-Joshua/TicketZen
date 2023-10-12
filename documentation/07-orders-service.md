@@ -19,3 +19,7 @@ Setup the following routes:
 - show ==> GET (/api/orders/:id)
 - new ==> POST (/api/orders)
 - delete ==> DELETE (/api/orders/:id)
+
+### Order Model
+
+Setup an implementation for Order Model which will use Mongoose Ref/Population Feature to associate Orders & Tickets
