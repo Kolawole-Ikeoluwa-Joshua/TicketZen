@@ -23,3 +23,24 @@ Setup the following routes:
 ### Order Model
 
 Setup an implementation for Order Model which will use Mongoose Ref/Population Feature to associate Orders & Tickets
+
+### Orders service test suite
+
+Setup testing suite similar to implementation used in tickets service, refactor code to orders usecase:
+
+- `test/setup.ts`
+- `__mocks__/nats-wrapper.ts`
+
+Verify test suite setup:
+
+```
+npm run test
+```
+
+Output:
+
+```
+No tests found, exiting with code 0
+
+Watch Usage: Press w to show more.
+```
