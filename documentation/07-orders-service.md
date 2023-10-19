@@ -44,3 +44,19 @@ No tests found, exiting with code 0
 
 Watch Usage: Press w to show more.
 ```
+
+### Create Orders Events
+
+Add order events (OrderCreatedEvent & OrderCancelledEvent) into the `src` folder in the Common module.
+
+In common directory, publish the NPM package with script previously setup.
+
+```
+npm run pub
+```
+
+In Orders directory, update common module.
+
+```
+npm update @scar-tickets/common
+```
