@@ -60,3 +60,7 @@ In Orders directory, update common module.
 ```
 npm update @scar-tickets/common
 ```
+
+### Implement Publisher
+
+Create `publishers` for OrderCreatedEvent & OrderCancelledEvent.
