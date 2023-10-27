@@ -19,3 +19,16 @@ Using postman make POST request to create a ticket, PUT request to update the ti
 [tickets] Event published to subject ticket:updated
 [orders] Message received: ticket:updated / orders-service
 ```
+
+## Optimistic Concurrency Control
+
+We use mongoose and mongodb to version database records as a way to fix concurrency issues.
+
+```
+# install npm module for optimistic concurrency control on mongoose
+
+# in the tickets service
+cd tickets
+
+npm install mongoose-update-if-current
+```
