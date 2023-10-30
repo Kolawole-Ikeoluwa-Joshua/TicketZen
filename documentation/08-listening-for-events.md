@@ -28,7 +28,7 @@ We use mongoose and mongodb to version database records as a way to fix concurre
 # install npm module for optimistic concurrency control on mongoose
 
 # in the tickets service
-cd tickets
+cd tickets or cd orders
 
 npm install mongoose-update-if-current
 ```
