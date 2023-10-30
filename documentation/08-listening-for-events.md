@@ -32,3 +32,6 @@ cd tickets
 
 npm install mongoose-update-if-current
 ```
+
+Include `version: number` in order and ticket events in the common module and update module version
+used in order and ticket services
