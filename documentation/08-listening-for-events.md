@@ -38,3 +38,6 @@ used in order and ticket services.
 
 After above requirement is completed then we can proceed to updating Event Definitions in Ticket & Orders services.
 
+## Test Event listeners
+
+Create unit tests for `ticket-created-listener` & `ticket-updated-listener` in Orders service.
