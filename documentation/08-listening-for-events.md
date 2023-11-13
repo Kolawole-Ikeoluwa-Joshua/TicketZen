@@ -62,7 +62,7 @@ Create `order-created-listener` & `order-cancelled-listener` in Tickets service.
 
 order-created-listener:
 
-- tickets service needs to be told that one of its tickets has been reserved<br>, and no further edits to that ticket should be allowed
+- tickets service needs to be told that one of its tickets has been reserved, and no further edits to that ticket should be allowed
 
 order-cancelled-listener:
 
