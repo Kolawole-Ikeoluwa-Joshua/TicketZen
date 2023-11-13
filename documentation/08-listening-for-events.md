@@ -38,6 +38,32 @@ used in order and ticket services.
 
 After above requirement is completed then we can proceed to updating Event Definitions in Ticket & Orders services.
 
-## Test Event listeners
+## Listeners in Orders Service
+
+Create `ticket-created-listener` & `ticket-updated-listener` in Orders service.
+
+ticket-created-listener:
+
+- orders needs to know the valid tickets that can be purchased
+- orders needs to know the price of each ticket
+
+ticket-updated-listener:
+
+- orders service needs to know when the price of a ticket has changed
+- orders service needs to know when a ticket has successfully been reserved
+
+### Test Event listeners in Orders Service
 
 Create unit tests for `ticket-created-listener` & `ticket-updated-listener` in Orders service.
+
+## Listeners in Tickets Service
+
+Create `order-created-listener` & `order-cancelled-listener` in Tickets service.
+
+order-created-listener:
+
+- tickets service needs to be told that one of its tickets has been reserved<br>, and no further edits to that ticket should be allowed
+
+order-cancelled-listener:
+
+- tickets service should unreserve a ticket if the corresponding order has been cancelled so this ticket can be edited again
