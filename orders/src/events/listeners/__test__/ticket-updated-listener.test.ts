@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { set } from "mongoose";
 import { TicketUpdatedEvent } from "@scar-tickets/common";
 import { TicketUpdatedListener } from "../ticket-updated-listener";
 import { natsWrapper } from "../../../nats-wrapper";
@@ -54,4 +54,16 @@ it('acks the message', async () => {
     await listener.onMessage(data, msg);
 
     expect(msg.ack).toHaveBeenCalled();
+});
+
+it('does not call ack if event has an out of order version', async () => {
+    const { msg, data, listener } = await setup();
+
+    data.version = 10;
+
+    try {
+        await listener.onMessage(data, msg);
+    } catch (err) {}
+
+    expect(msg.ack).not.toHaveBeenCalled();
 });
