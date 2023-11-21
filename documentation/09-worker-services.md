@@ -14,3 +14,13 @@ expiration:complete:
 - Bull JS library to send notifications or reminders in 15 minutes intervals
 - Redis server to store notifications & notify Bull JS once timer is reached
 - Publisher to emit `expiration:complete` events
+
+## Initial setup
+
+```
+# install Bull JS library
+npm install bull @types/bull
+
+# other dependencies in package.json
+npm install
+```
