@@ -4,7 +4,8 @@ import {
     validateRequest,
     NotFoundError,
     requireAuth,
-    NotAuthorizedError
+    NotAuthorizedError,
+    BadRequestError
 } from '@scar-tickets/common';
 import { Ticket } from '../models/ticket';
 import { TicketUpdatedPublisher } from '../events/publishers/ticket-updated-publisher';
@@ -30,6 +31,11 @@ router.put(
 
         if(!ticket) {
             throw new NotFoundError();
+        }
+
+        // rejecting edits of reserved tickets
+        if(ticket.orderId) {
+            throw new BadRequestError('Cannot edit a reserved ticket');
         }
 
         // currentUser already defined in requireAuth middleware
