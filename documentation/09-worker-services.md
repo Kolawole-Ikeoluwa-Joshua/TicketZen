@@ -17,10 +17,28 @@ expiration:complete:
 
 ## Initial setup
 
+Setup tsconfig, package.json, dockerfile, .dockerignore, nats-wrapper and index.ts for expiration service
+
 ```
 # install Bull JS library
 npm install bull @types/bull
 
 # other dependencies in package.json
 npm install
+```
+
+## K8s setup
+
+Build expiration docker container and push to container registry
+
+```
+docker build -t <docker-id>/expiration .
+
+docker push <docker-id>/expiration
+```
+
+Setup exipration and redis deployment manifests, update skaffold config & start up skaffold
+
+```
+skaffold dev
 ```
