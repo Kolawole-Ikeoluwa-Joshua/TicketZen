@@ -12,4 +12,5 @@ Microservice Application for Trading Concert Tickets, built with MongoDB, Expres
 - [NATS Integration](documentation/06-nats-integration.md)
 - [Orders Service](documentation/07-orders-service.md)
 - [Listening for Events and Handling Concurrency Issues](documentation/08-listening-for-events.md)
+- [Worker Services](documentation/09-worker-services.md)
 - [CI/CD](documentation/cicd.md)
