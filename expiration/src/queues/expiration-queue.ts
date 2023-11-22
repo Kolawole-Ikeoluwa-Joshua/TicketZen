@@ -10,6 +10,7 @@ const expirationQueue = new Queue('order:expiration', {
     }
 });
 
+// process a job
 expirationQueue.process(async (job) => {
     console.log('publish expiration:complete event for orderId', job.data.orderId);
 });
