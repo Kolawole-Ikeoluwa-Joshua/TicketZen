@@ -39,3 +39,11 @@ docker push <docker-id>/payments
 3. create payment service database deployment manifest.
 4. start up skaffold
 ```
+
+## Database Models:
+
+These are the properties needed for orders model in the payments service:
+
+```
+id, status, version, userid, price
+```
