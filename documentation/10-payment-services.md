@@ -51,3 +51,4 @@ id, status, version, userid, price
 ## Replicating Orders
 
 create event listener for `order:created` events.
+create event listener for `order:cancelled` events.
