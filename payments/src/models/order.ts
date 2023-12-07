@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { updateIfCurrentPlugin } from 'mongoose-update-if-current';
 import { OrderStatus } from '@scar-tickets/common';
 
 // interfaces
@@ -43,6 +44,10 @@ const orderSchema = new mongoose.Schema({
         }
     }
 });
+
+orderSchema.set('versionKey', 'version');
+orderSchema.plugin(updateIfCurrentPlugin);
+
 
 // build method
 orderSchema.statics.build = (attrs: OrderAttrs) => {
