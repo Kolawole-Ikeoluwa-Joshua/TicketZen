@@ -47,3 +47,7 @@ These are the properties needed for orders model in the payments service:
 ```
 id, status, version, userid, price
 ```
+
+## Replicating Orders
+
+create event listener for `order:created` events.
