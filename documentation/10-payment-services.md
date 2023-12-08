@@ -52,3 +52,9 @@ id, status, version, userid, price
 
 create event listener for `order:created` events.
 create event listener for `order:cancelled` events.
+
+## Implementing Charge Handler
+
+This workflow will be achieved by integrating Stripe JS library into the payments service <br>
+
+so we can utilize the Stripe API to handle credit card info & payments.

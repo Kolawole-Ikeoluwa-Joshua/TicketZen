@@ -10,6 +10,13 @@ spec:
     - host: ticketzen.dev
       http:
         paths:
+          - path: /api/payments/?(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: payments-srv
+                port:
+                  number: 5000
           - path: /api/users/?(.*)
             pathType: ImplementationSpecific
             backend:
