@@ -83,3 +83,10 @@ kubectl get secrets
 
 Use stripe fake token `tok_visa` for stripe accounts in test mode when making the api request <br>
 to the payments route with postman.
+
+### Realistic Test Implementation
+
+Instead of creating an automated test that uses a mocked stripe client, we can allow our automated test <br>
+to contact the stripe API directly.
+
+Note: Store your stripe API key in an environment variable

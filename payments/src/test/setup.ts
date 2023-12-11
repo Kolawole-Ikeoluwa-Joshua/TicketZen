@@ -12,6 +12,12 @@ declare global {
 // mock natsWrapper
 jest.mock('../nats-wrapper');
 
+// get STRIPE API KEY from .env and use in test
+require('dotenv').config();
+const apikey = process.env.STRIPE_KEY;
+
+process.env.STRIPE_KEY = apikey;
+
 let mongo: any;
 // hook runs before all tests
 beforeAll(async () => {
