@@ -78,3 +78,8 @@ verify secret created above:
 ```
 kubectl get secrets
 ```
+
+### Manually Testing Payments
+
+Use stripe fake token `tok_visa` for stripe accounts in test mode when making the api request <br>
+to the payments route with postman.
