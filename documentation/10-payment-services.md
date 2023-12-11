@@ -58,3 +58,11 @@ create event listener for `order:cancelled` events.
 This workflow will be achieved by integrating Stripe JS library into the payments service <br>
 
 so we can utilize the Stripe API to handle credit card info & payments.
+
+### Setup Stripe SDK
+
+```
+npm install stripe
+```
+
+sign up on stripe to get an API Key
