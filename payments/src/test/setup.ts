@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 
 // let typescript know there is a global interface with signin property
 declare global {
-    var signin: () => string[];
+    var signin: (id?: string) => string[];
 }
 
 // mock natsWrapper
@@ -43,10 +43,10 @@ afterAll(async () => {
 });
 
 // get auth cookie helper function
-global.signin = () => {
+global.signin = (id?: string) => {
     // Build a JWT payload, { id, email }
     const payload = {
-        id: new mongoose.Types.ObjectId().toHexString(),
+        id: id || new mongoose.Types.ObjectId().toHexString(),
         email: 'test@test.com'
     };
     // Create the JWT!
