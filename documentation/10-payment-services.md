@@ -66,3 +66,15 @@ npm install stripe
 ```
 
 sign up on stripe to get an API Key
+
+### Create K8s secret for Stripe API Secret Key
+
+```
+kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=<stripe-secret-key>
+```
+
+verify secret created above:
+
+```
+kubectl get secrets
+```
