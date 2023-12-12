@@ -6,7 +6,7 @@ Receiving:
 - order:created: Payments service needs to know there is a new order that a user might submit a payment for
 - order:cancelled: Payments should know that any incoming payments for this order should be rejected
   Emitting:
-- charge:created: Orders service needs to know that an order has been paid for
+- payment:created: Orders service needs to know that an order has been paid for
 
 ## Initial setup:
 
@@ -53,7 +53,7 @@ id, status, version, userid, price
 create event listener for `order:created` events.
 create event listener for `order:cancelled` events.
 
-## Implementing Charge Handler
+## Implementing Charge or Payment Handler
 
 This workflow will be achieved by integrating Stripe JS library into the payments service <br>
 
