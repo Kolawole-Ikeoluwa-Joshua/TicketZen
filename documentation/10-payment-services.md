@@ -90,3 +90,7 @@ Instead of creating an automated test that uses a mocked stripe client, we can a
 to contact the stripe API directly.
 
 Note: Store your stripe API key in an environment variable
+
+## Payments Model
+
+Create a payment model to tie orders and related charges together.
