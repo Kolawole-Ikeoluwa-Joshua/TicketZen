@@ -38,3 +38,15 @@ kubectl get services
 
 kubectl get services -n ingress-nginx
 ```
+
+# Server-Side-Rendered React App Pages:
+
+Initially worked on setting up the `Sign up`, `Sign in` and `Sign out` pages.
+
+A summarized list of React App Pages to be completed:
+
+- Create Tickets page
+- Tickets on sale (Landing page)
+- Ticket details & purchase options page
+- Order details & payment options page
+- Stripe Payment page
