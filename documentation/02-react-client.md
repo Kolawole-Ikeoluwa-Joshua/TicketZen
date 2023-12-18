@@ -21,6 +21,10 @@ npm install bootstrap
 
 // install axios
 npm install axios
+
+// install react-stripe-checkout
+npm install react-stripe-checkout
+npm install prop-types
 ```
 
 Dockerize Next App:
