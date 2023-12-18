@@ -50,3 +50,16 @@ A summarized list of React App Pages to be completed:
 - Ticket details & purchase options page
 - Order details & payment options page
 - Stripe Payment page
+
+
+# App Component Pages Documentation
+
+| Route                | File in Pages Dir       | Goal                                      |
+| -------------------- | ------------------------ | ------------------------------------------ |
+| `/auth/signin`       | `/auth/signin.js`       | Show sign-in form                          |
+| `/auth/signup`       | `/auth/signup.js`       | Show sign-up form                          |
+| `/auth/signout`      | `/auth/signout.js`      | Sign out                                   |
+| `/`                  | `/index.js`             | Show list of all tickets                   |
+| `/tickets/new`       | `/tickets/new.js`       | Form to create a new ticket                |
+| `/tickets/:ticketid` | `/tickets/[ticketid].js` | Details about a specific ticket            |
+| `/orders/:orderid`   | `/orders/[orderid].js`  | Show info about an order + payment button  |
