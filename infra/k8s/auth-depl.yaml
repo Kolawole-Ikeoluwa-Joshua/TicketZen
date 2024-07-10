@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: kolawolejoshua/auth:1.0.0
+          image: kolawolejoshua/auth:latest
           env:
             - name: MONGO_URI
               value: 'mongodb://auth-mongo-srv:27017/auth'
